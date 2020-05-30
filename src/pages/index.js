@@ -17,7 +17,7 @@ class IndexPage extends React.Component {
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
         <h1>
-          Hey people, Welcome!{" "}
+          Hey people, welcome!{" "}
           <span role="img" aria-label="wave emoji">
             👋
           </span>
