@@ -1,12 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Button from "../components/button"
 import mainLogo from "./emoj.jpg"
-import { SocialIcon } from 'react-social-icons';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import SocialFollow from "../components/SocialFollow"
+
 class IndexPage extends React.Component {
   render() {
     const siteTitle = ""
@@ -26,8 +25,10 @@ class IndexPage extends React.Component {
           My name is Cameron and I'm from the UK. I work as a Software Developer and enjoy all things Cloud and IoT. I'm starting a developer blog to document my journey as a developer.
         </p>
         <Link to="/blog/">
-          <Button marginTop="35px" marginBottom="10px">Go to Blog</Button>
+          <Button marginTop="35px" marginBottom="5px">Go to Blog</Button>
         </Link>
+        <SocialFollow />
+
         {/* <SocialIcon url="https://twitter.com/cameron_1010" />
         <SocialIcon url="https://github.com/cameronldroberts" /> */}
       </Layout>
