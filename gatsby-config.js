@@ -4,7 +4,7 @@ module.exports = {
     title: `Blog`,
     author: `Cameron Roberts`,
     description: `A starter personal blog.`,
-    siteUrl: `https://cameron-roberts.netlify.app/`,
+    siteUrl: `https://www.cameronroberts.dev/`,
     social: {
       twitter: `cameron_1010`,
     },
