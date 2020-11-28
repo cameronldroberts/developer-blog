@@ -1,15 +1,20 @@
-on:
+name: Node.js CI
 
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
-steps:
-- uses: actions/checkout@v2
-- uses: actions/setup-node@v2-beta
-  with:
-    node-version: '12'
-    check-latest: true
-- run: node publish.js
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [8.x, 10.x, 12.x]
+
+    steps:
+    env:
+      API_KEY: ${{ secrets.DEVTO_APIKEY }}
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+    - run: node publish.js
