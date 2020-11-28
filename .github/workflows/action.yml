@@ -1,21 +1,24 @@
 name: Node.js CI
 
-on:
+on: [push]
   # Trigger the workflow on push or pull request,
   # but only for the main branch
-  push:
-    branches:
-      - master
+  # push:
+  #   branches:
+  #     - master
 jobs:
   build:
 
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    -  uses: actions/setup-node@v1
+    - uses: actions/setup-node@v1
        with:
         node-version: '12'
+    env:
+      API_KEY: ${{ secrets.DEVTO_APIKEY }}
     - run: npm install    
-    - run: node publish.js
-      env:
-        API_KEY: ${{ secrets.DEVTO_APIKEY }}
+    - run: |
+        env    
+        node publish.js
+
