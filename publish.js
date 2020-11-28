@@ -2,7 +2,7 @@ const axios = require("axios");
 const fs = require("fs")
 // const { resolve, join } = require('path');
 const fm = require('front-matter')
-const API_KEY = process.env.DEVTO_APIKEY
+const API_KEY = process.env.API_KEY
 
 // TODO Check for APIKEY
 // TODO check existing posts
