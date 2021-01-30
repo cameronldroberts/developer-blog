@@ -4,9 +4,9 @@ date: 2020-12-05
 title: Using the Twitter API to scrape tweets
 description: Using the Twitter API to scrape tweets
 tags: [ "Golang", "twitter", "API", "Search"]
+canonical_url: "www.cameronroberts.dev/blog/golang-twitter-scraper"
 ---
 
-# Golang Twitter bot 
 This post will talk through the steps on how to create your own Twitter bot in Go! We will be making use of [go-twitter](https://github.com/dghubble/go-twitter) which is a Go client library for the Twitter API. Big thanks to the developers over there for making an easy to use library.
 
 ## Prerequisites 
@@ -307,3 +307,5 @@ func searchTweets(client *twitter.Client) error {
 	return nil
 }
 ```
+That's it for this post, hopefully you enjoyed it and it made sense! 
+https://www.cameronroberts.dev/
