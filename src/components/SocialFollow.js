@@ -4,7 +4,8 @@ import '../css/style.css';
 import {
     faTwitter,
     faGithub,
-    faMedium
+    faMedium,
+    faDev
 } from "@fortawesome/free-brands-svg-icons";
 
 export default function SocialFollow() {
@@ -18,6 +19,9 @@ export default function SocialFollow() {
             </a>
             <a href="https://medium.com/@cameronldroberts" className="medium social">
                 <FontAwesomeIcon icon={faMedium} size="2x" />
+            </a>
+            <a href="https://dev.to/cameronldroberts" className="devto social">
+                <FontAwesomeIcon icon={faDev} size="2x" />
             </a>
         </div>
     );

@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import SideBar from "../components/Sidebar";
+import Form from "../components/form"
 class Contact extends React.Component {
     render() {
         const { data } = this.props
@@ -12,7 +13,7 @@ class Contact extends React.Component {
                 <Layout location={this.props.location}>
                     <SEO title="Contact me" />
                     <h1> Contact me</h1>
-                    <p> Page coming soon...</p>
+                    < Form />
                 </Layout>
             </div>
         )
