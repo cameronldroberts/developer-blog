@@ -60,22 +60,15 @@ export default function Contact() {
                         Don’t fill this out: <input name="bot-field" onChange={handleChange} />
                     </label>
                 </p>
-                {/* <p> */}
-
                 <TextField id="standard-basic" label="name" type="text" name="name" onChange={handleChange} />
-                {/* <input type="text" name="name" onChange={handleChange} /> */}
-                {/* </p> */}
-                {/* <p> */}
-
                 <TextField id="standard-basic" label="email" type="email" name="email" onChange={handleChange} />
-                {/* <input type="email" name="email" onChange={handleChange} /> */}
-                {/* </p> */}
-
                 <p>
                     {/* <textarea name="message" onChange={handleChange} /> */}
                     <TextField
                         id="standard-multiline-flexible"
                         label="message"
+                        name="message"
+                        type="text"
                         multiline
                         rowsMax={4}
                         onChange={handleChange}
