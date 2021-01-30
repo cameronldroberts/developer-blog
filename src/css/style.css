@@ -29,6 +29,12 @@ color: black;
 a.medium{
   color: black;
 }
+a.devto { 
+  color: black;
+}
+code {
+  font-weight: bold;
+}
 p {
   padding-top: 10px;
 }
