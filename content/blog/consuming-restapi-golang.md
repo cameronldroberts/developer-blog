@@ -14,7 +14,6 @@ This post will talk about how to consume a REST API using Go. We will go through
 If you need instructions on how to install it this is a good place to [start](https://golang.org/doc/install)
 
 ### Introduction
-I've been meaning to start a developer blog of some sort for a while but never seem to get around to doing so. With the second lockdown still in force for England it seems like now is a good time.
 This is a popular task to complete as developer so I figured it would be a good one to start with. The API that will be used in this post is [icanhazdadjoke](https://medium.com/r/?url=https%3A%2F%2Ficanhazdadjoke.com%2F) as you can probably guess from the URL it will return a joke when called. To get started let's create a new directory that will hold the project.
 
 ### Project setup
