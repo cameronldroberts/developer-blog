@@ -12,31 +12,27 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 
-async function getLanguageStats(repoLanguagesUrl) {
-    let responses = await Promise.all(repoLanguagesUrl.map(url => axios.get(url)));
-    let masterObj = {
-        CSS: 0,
-        Go: 0,
-        HTML: 0,
-        JavaScript: 0,
-        Makefile: 0,
-        Ruby: 0,
-        SCSS: 0,
-        Shell: 0
-    };
+// async function getLanguageStats(repoLanguagesUrl) {
+//     let responses = await Promise.all(repoLanguagesUrl.map(url => axios.get(url)));
+//     let masterObj = {
+//         CSS: 0,
+//         Go: 0,
+//         HTML: 0,
+//         JavaScript: 0,
+//         Makefile: 0,
+//         Ruby: 0,
+//         SCSS: 0,
+//         Shell: 0
+//     };
 
-    responses.forEach(obj => {
-
-        const keys = Object.keys(obj.data);
-        keys.forEach(key => {
-            const val = obj.data[key];
-            masterObj[key] = (obj.data.hasOwnProperty(key)) ? masterObj[key] + val : val;
-        })
-    })
-
-    console.log(masterObj)
-
-}
+//     responses.forEach(obj => {
+//         const keys = Object.keys(obj.data);
+//         keys.forEach(key => {
+//             const val = obj.data[key];
+//             masterObj[key] = (obj.data.hasOwnProperty(key)) ? masterObj[key] + val : val;
+//         })
+//     })
+// }
 class Projects extends React.Component {
 
     state = {
@@ -63,12 +59,8 @@ class Projects extends React.Component {
                     repoLanguagesUrl.push(res["languages_url"])
                     projectInfo.push(obj);
                 })
-
-                // projectInfo.sort(function (a, b) {
-                //     return new Date(b.date) - new Date(a.date);
-                // });
-                // console.log(JSON.stringify(projectInfo))
-                getLanguageStats(repoLanguagesUrl)
+                projectInfo = projectInfo.slice(0, 9)
+                // getLanguageStats(repoLanguagesUrl)
                 this.setState({ projects: projectInfo })
             })
             .catch(console.log)
@@ -91,7 +83,6 @@ class Projects extends React.Component {
                                             <Typography className="projectDescription" color="textSecondary">
                                                 {value.description}
                                             </Typography>
-
                                         </CardContent>
                                     </Card>
                                 </Grid>
