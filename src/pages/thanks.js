@@ -3,10 +3,6 @@ import SideBar from '../components/Sidebar'
 import Layout from "../components/layout"
 class Project extends React.Component {
     render() {
-        const { data } = this.props
-        // const siteTitle = data.site.siteMetadata.title
-        // const posts = data.allMdx.edges
-
         return (
             <div id="App">
                 <SideBar pageWrapId={"page-wrap"} outerContainerId={"App"} />

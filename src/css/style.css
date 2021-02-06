@@ -39,9 +39,9 @@ p {
   padding-top: 10px;
 }
 
-* {
+/* * {
   box-sizing: border-box;
-}
+} */
 
 #page-wrap {
   padding-bottom: 10px;
@@ -128,3 +128,14 @@ p {
 .menu-item{
   /* text-decoration: none; */
 }
+
+.project-card{
+  width: 200px;
+  height: 200px;
+  border-radius: 60px;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  border-bottom: #c94e50;
+  }  
