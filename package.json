@@ -18,7 +18,7 @@
     "@material-ui/core": "^4.11.3",
     "@mdx-js/mdx": "^1.5.1",
     "@mdx-js/react": "^1.5.1",
-    "axios": "^0.21.0",
+    "axios": "^0.21.1",
     "babel-plugin-styled-components": "^1.10.0",
     "bootstrap": "^4.5.3",
     "front-matter": "^4.0.2",
@@ -52,6 +52,7 @@
     "react-helmet": "^5.2.0",
     "react-switch": "^5.0.0",
     "react-typography": "^0.16.19",
+    "recharts": "^2.0.4",
     "showdown": "^1.9.1",
     "styled-components": "^4.2.0",
     "tailwindcss": "^1.9.6",
@@ -59,7 +60,8 @@
     "typeface-montserrat": "0.0.54",
     "typography": "^0.16.19",
     "typography-theme-wordpress-2016": "^0.16.19",
-    "unirest": "^0.6.0"
+    "unirest": "^0.6.0",
+    "victory": "^35.4.8"
   },
   "devDependencies": {
     "prettier": "^1.17.0",
@@ -81,6 +83,7 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "lint": "eslint src/**/*.js src/**/*.jsx"
   }
 }
