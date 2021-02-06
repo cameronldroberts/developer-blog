@@ -5,8 +5,6 @@ import SideBar from "../components/Sidebar";
 import Form from "../components/form"
 class Contact extends React.Component {
     render() {
-        const { data } = this.props
-
         return (
             <div id="App">
                 <SideBar pageWrapId={"page-wrap"} outerContainerId={"App"} />

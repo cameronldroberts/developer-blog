@@ -10,7 +10,6 @@ import SideBar from "../components/Sidebar";
 class Blog extends React.Component {
   render() {
     const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
     const posts = data.allMdx.edges
 
     return (
