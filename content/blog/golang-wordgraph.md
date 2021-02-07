@@ -33,13 +33,47 @@ go mod init github.com/cameronldroberts/golang-wordgraph
 
 
 ### 3..2..1.. Go!
-Open the `golang-wordgraph` directory in your favourite text editor and create a file called `main.go`
+Open the `golang-wordgraph` directory in your favourite text editor and create a file called `main.go`. 
+
+Firstly we will focus on authenticating with twitter. We are going to store the keys in environment variables. It’s not a good idea to have sensitive information stored in our code as when it reaches our source control (Github, Gitlab, etc) it may be visible to others.
+
+Grab the API keys and tokens from your [twitter developer dashboard](https://developer.twitter.com/en/portal/dashboard). The four values needed are `CONSUMER_KEY`, `CONSUMER_SECRET`, `ACCESS_TOKEN` and `ACCESS_TOKEN_SECRET`.
+```bash
+export CONSUMER_KEY=<API_KEY_VALUE>
+export CONSUMER_SECRET=<API_KEY_SECRET_VALUE>
+export ACCESS_TOKEN=<ACCESS_TOKEN_VALUE>
+export ACCESS_TOKEN_SECRET=<ACCESS_TOKEN_SECRET_VALUE>
+```
 
 
+Now that we have the environment variables exported we are ready to start writing some Golang! To start lets begin with the following code.
 
+```go
+package main
+import (
+	"fmt"
+	"os"
+)
 
-![](../assets/Wordgraph/wordgraph.png)
+type Credentials struct {
+	ConsumerKey       string
+	ConsumerSecret    string
+	AccessToken       string
+	AccessTokenSecret string
+}
 
+func main() {
+	creds := Credentials{
+		ConsumerKey:       os.Getenv("CONSUMER_KEY"),
+		ConsumerSecret:    os.Getenv("CONSUMER_SECRET"),
+		AccessToken:       os.Getenv("ACCESS_TOKEN"),
+		AccessTokenSecret: os.Getenv("ACCESS_TOKEN_SECRET"),
+	}
+}
+```
+
+We import some of the core packages, create a struct to hold our credentials and populate it with the values from the env vars we just exported.
+<!-- ![](../assets/Wordgraph/wordgraph.png) -->
 
 
 
